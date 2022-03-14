@@ -1,0 +1,89 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.game {
+  width: 800px;
+  height: 300px;
+  border: 2px solid black;
+  border-style: ridge;
+  position: relative;
+  left: 20%;
+  top: 100px;
+}
+#character {
+  width: 30px;
+  height: 70px;
+  position: absolute;
+  top: 230px;
+  left: 10px;
+  background-color: royalblue;
+}
+#block {
+  width: 40px;
+  height: 40px;
+  background-color: salmon;
+  position: absolute;
+  top: 260px;
+  left: 760px;
+}
+#jmp {
+  position: absolute;
+  padding: 10px 30px;
+  top: 360px;
+  left: 390px;
+}
+#strt {
+  position: absolute;
+  padding: 10px 30px;
+  top: 360px;
+  left: 280px;
+}
+
+@keyframes block {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@keyframes jump {
+  0% {
+    top: 230px;
+  }
+  50% {
+    top: 160px;
+  }
+  100% {
+    top: 230px;
+  }
+}
+.start {
+  animation: block 1.2s infinite linear;
+}
+.jump {
+  animation: jump 500ms infinite;
+}
+
+@media screen and (max-width:600px)
+{
+  .Run{
+    width: 100%;
+    position: relative;
+    left: 0px;
+}
+#block {
+  width: 10%;
+  position: absolute;
+  left:90% ;
+}
+#strt{
+  position: absolute;
+  left: 100px;
+}
+#jmp{
+  position: absolute;
+  left: 230px;
+}
+}
